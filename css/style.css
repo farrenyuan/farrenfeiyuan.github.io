@@ -1,0 +1,39 @@
+/* ---- 1. Variables ------------- */
+:root {
+  --bg: #fdfdfd;
+  --fg: #111;
+  --accent: #933;   /* tweak to taste */
+  --max-width: 860px;
+}
+
+/* ---- 2. Base ------------------ */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 16px/1.5 "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+main, header, footer { max-width: var(--max-width); margin: auto; padding: 1.5rem; }
+
+/* ---- 3. Header ---------------- */
+header { display: flex; flex-wrap: wrap; align-items: baseline; }
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+nav a:hover { text-decoration: underline; }
+
+/* ---- 4. Gallery grid ---------- */
+#images .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+figure, img { width: 100%; height: auto; }
+
+/* ---- 5. Responsive tweaks ----- */
+@media (max-width: 600px) {
+  header { flex-direction: column; }
+}
