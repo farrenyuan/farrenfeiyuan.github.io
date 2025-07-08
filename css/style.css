@@ -37,3 +37,10 @@ figure, img { width: 100%; height: auto; }
 @media (max-width: 600px) {
   header { flex-direction: column; }
 }
+
+.bio-photo-bottom {
+  display: block;         
+  margin: 2rem auto 4rem; 
+  max-width: 200px;       
+  height: auto;           
+}
