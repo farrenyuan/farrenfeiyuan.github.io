@@ -1,41 +1,69 @@
-/* ---- 1. Variables ------------- */
-:root {
-  --bg: #fdfdfd;
-  --fg: #111;
-  --accent: #933;   /* tweak to taste */
-  --max-width: 860px;
-}
-
-/* ---- 2. Base ------------------ */
-* { box-sizing: border-box; }
 body {
+  background-color: #fff;      /* 1. page background */
+  color: #111;
   margin: 0;
-  font: 16px/1.5 "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
-main, header, footer { max-width: var(--max-width); margin: auto; padding: 1.5rem; }
 
-/* ---- 3. Header ---------------- */
-header { display: flex; flex-wrap: wrap; align-items: baseline; }
-nav a {
-  margin-right: 1rem;
+main.content {
+  max-width: 60ch;             /* keep text columns readable */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  overflow-wrap: break-word;   /* allow long words/URLs to wrap */
+}
+h1, h2, h3, h4, h5, h6 {
+  white-space: normal;         /* undo any no-wrap */
+  overflow-wrap: break-word;   /* break long words if needed */
+  word-break: break-word;
+  max-width: 100%;             /* never overflow its container */
+  margin-top: 0;               /* tighten vertical rhythm */
+}
+header {
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-circle {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #555;
+  color: #fff;
   text-decoration: none;
-  color: var(--accent);
+  font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-nav a:hover { text-decoration: underline; }
 
-/* ---- 4. Gallery grid ---------- */
-#images .grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.nav-circle:hover {
+  background: #ffcc00;
+  color: #333;
 }
-figure, img { width: 100%; height: auto; }
 
-/* ---- 5. Responsive tweaks ----- */
-@media (max-width: 600px) {
-  header { flex-direction: column; }
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
 }
 
 .bio-photo-bottom {
