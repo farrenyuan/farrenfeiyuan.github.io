@@ -59,7 +59,7 @@ main {
 }
 #about h2 {
   margin-bottom: 0.5rem;
-  text-transform: capitalize;
+  text-transform: none;
 }
 #about p {
   margin-bottom: 1rem;
