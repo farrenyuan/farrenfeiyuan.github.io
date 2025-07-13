@@ -6,7 +6,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Founders Grotesk";
   src: url("../fonts/FoundersGrotesk-LightItalic.woff2") format("woff2"),
@@ -16,7 +15,7 @@
   font-display: swap;
 }
 
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
