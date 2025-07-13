@@ -65,6 +65,7 @@ header h1 {
 nav {
   display: flex;
   align-items: center;
+}
 nav a {
   display: infline-flex;
   width: 3.5rem;
